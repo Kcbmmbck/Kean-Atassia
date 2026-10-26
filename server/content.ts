@@ -1,0 +1,31 @@
+export const anniversaryContent = {
+  story: [
+    { date: 'The beginning', title: 'The day we first met', description: 'Somehow, in a world full of people, our paths found each other. I did not know it yet, but that ordinary day was about to become one of my favorite beginnings.', image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85' },
+    { date: 'A little later', title: 'Our first conversation', description: 'One hello turned into a conversation I never wanted to end. You made talking feel easy, warm, and a little bit magical.', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=85' },
+    { date: 'Our favorite kind of night', title: 'Our first video call', description: 'Miles could not make that smile any smaller on my screen. Even a quiet moment together felt like exactly where I belonged.', image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=85' },
+    { date: 'Somewhere along the way', title: 'The moment I knew', description: 'It was not one grand thing. It was all the little things: your laugh, your kindness, and how even an ordinary day felt brighter with you in it.', image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85' },
+    { date: 'August 13, 2027', title: 'Our first anniversary', description: 'One whole year of us: all our conversations, all our little moments, and all the love still waiting for us in the days ahead.', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85' },
+  ],
+  memories: [
+    { title: 'A favorite little moment', category: 'First Memories', date: 'A day to remember', caption: 'The start of so many favorite things.', image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=85' },
+    { title: 'Just us', category: 'Cute Moments', date: 'A lovely day', caption: 'My favorite place is wherever you are.', image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85' },
+    { title: 'Our kind of date', category: 'Dates', date: 'One for the books', caption: 'A little adventure with my favorite person.', image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=85' },
+    { title: 'A smile I keep', category: 'Selfies', date: 'Any day with you', caption: 'Proof that my heart knows exactly where it belongs.', image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=85' },
+    { title: 'Little celebrations', category: 'Special Days', date: 'A sweet memory', caption: 'Every day feels worth celebrating when it is with you.', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85' },
+    { title: 'Our long talks', category: 'Video Calls', date: 'One more minute', caption: 'Even the quiet moments feel like home.', image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=85' },
+  ],
+  reasons: [
+    'You make my ordinary days feel special.',
+    'Your smile can turn my whole day around.',
+    'I love our long video calls, even when we have nothing to say.',
+    'You are my favorite person to talk to.',
+    'You make distance feel a little less far.',
+    'Your kind heart makes me want to be a better person.',
+    'Every moment with you is worth keeping.',
+    'You laugh at my silly jokes (and that is true love).',
+  ],
+  letter: 'My love, somewhere between our first hello and all the little moments that followed, you became my favorite part of every day. Thank you for every laugh, every late conversation, every bit of patience, and every time you made me feel close to you even from far away. I love the way you make ordinary things feel special, and I love that being myself feels easy with you. This first year is only the beginning of all the memories we still get to make. Whatever the next chapter brings, I want to keep choosing you, cheering for you, and finding new reasons to fall for you. Happy anniversary, baby. You are my favorite person, my sweetest thought, and the home my heart keeps looking for. I love you more than these words can hold.',
+  puzzleImage: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=90',
+  surpriseImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=90',
+  surpriseLetter: 'Baby, happy first anniversary! A whole year of us, and somehow I still get that little flutter in my heart whenever I see your name pop up. Thank you for being my favorite hello, my safest place to be silly, and the person who makes even the quietest moments feel full. I love how we can talk for hours, how we can laugh over the smallest things, and how being together—near or far—always feels right. Every memory we have made this year is a tiny treasure I carry with me: every sweet conversation, every video call that lasted longer than we planned, every laugh, every kind word, and all the little ways you show me your heart. I am proud of the love we are building, one patient, joyful, wonderfully ordinary day at a time. I hope this next chapter brings us new places to explore, new stories to tell, and countless more reasons to choose each other. Wherever life takes us, I want to keep learning you, supporting your dreams, and making you feel as loved as you make me feel. Thank you for making my world softer, brighter, and so much more beautiful. This is our first anniversary, but it is not the end of the story. It is one lovely beginning. I love you, baby—today, tomorrow, and through every chapter still to come. Mwah mwah!',
+}
