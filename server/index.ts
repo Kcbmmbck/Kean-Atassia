@@ -15,7 +15,9 @@ const pin = process.env.ANNIVERSARY_PIN
 const production = process.env.NODE_ENV === 'production'
 const unlockAt = Date.parse('2027-08-13T00:00:00+08:00')
 const here = path.dirname(fileURLToPath(import.meta.url))
-const uploadsDir = path.join(here, 'private', 'uploads')
+const uploadsDir = process.env.VERCEL
+  ? path.join('/tmp', 'anniversary-uploads')
+  : path.join(here, 'private', 'uploads')
 
 if (production && (!sessionSecret || sessionSecret.length < 32 || !pin)) {
   throw new Error('Production requires SESSION_SECRET (32+ characters) and ANNIVERSARY_PIN.')
@@ -125,10 +127,14 @@ app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
   res.status(500).json({ error: 'Something went wrong. Please try again.' })
 })
 
-if (production) {
+if (production && !process.env.VERCEL) {
   const distDir = path.resolve(here, '../dist')
   app.use(express.static(distDir))
   app.get('*path', (_req, res) => res.sendFile(path.join(distDir, 'index.html')))
 }
 
-app.listen(port, () => console.log(`Anniversary app server listening on port ${port}`))
+if (!process.env.VERCEL) {
+  app.listen(port, () => console.log(`Anniversary app server listening on port ${port}`))
+}
+
+export default app

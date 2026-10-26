@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/pin", "destination": "/index.html" },
+    { "source": "/puzzle", "destination": "/index.html" },
+    { "source": "/story", "destination": "/index.html" },
+    { "source": "/gallery", "destination": "/index.html" },
+    { "source": "/reasons", "destination": "/index.html" },
+    { "source": "/surprise", "destination": "/index.html" }
+  ]
+}
