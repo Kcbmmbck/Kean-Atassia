@@ -95,10 +95,11 @@ button { cursor: pointer; }
 @media (max-width: 800px) {
   .site-header { min-height: 65px; padding: 0 20px; }.site-header nav { gap: 14px; }.nav-link { font-size: 10px; }.music-label { display: none; }.page-shell { padding-top: 42px; }.puzzle-layout { grid-template-columns: minmax(0,1.4fr) minmax(190px,.7fr); gap: 15px; }.puzzle-board-wrap { padding: 13px; }.side-card { padding: 17px; }.timeline-item { gap: 40px; padding-right: 12px; padding-left: 12px; }.timeline-photo { height: 180px; }.memory-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.reasons-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }.surprise-layout { gap: 25px; }.letter-paper { padding: 25px 22px; }.letter-paper p { font-size: 16px; }
 }
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .countdown-page { padding: 20px 19px 17px; }.countdown-top .brand { font-size: 13px; }.date-pill { padding: 8px 10px; font-size: 10px; }.countdown-content { padding-top: 18px; }.hero-heart { width: 86px; height: 86px; margin-bottom: 12px; }.hero-heart svg { width: 59px; height: 59px; }.countdown-content h1 { font-size: clamp(46px,13vw,64px); }.countdown-subtitle { max-width: 300px; margin: 13px 0 22px; font-size: 12px; line-height: 1.7; }.time-unit { min-width: 59px; }.time-unit strong { width: 59px; padding: 12px 0; border-radius: 11px; font-size: 24px; }.time-unit span { font-size: 8px; }.countdown-message { font-size: 15px; }.countdown-footer { font-size: 8px; }.countdown-footer span:last-child { display: none; }.countdown-orb { width: 170px; height: 170px; filter: blur(50px); }
   .pin-card { padding: 26px 22px; }.back-link { top: 20px; left: 20px; }
-  .site-header { min-height: auto; flex-wrap: wrap; justify-content: space-between; gap: 0; padding: 10px 15px 0; }.site-header>.brand { margin: 0 0 8px 3px; font-size: 14px; }.music-button { margin-bottom: 8px; }.site-header nav { order: 3; width: calc(100% + 30px); justify-content: space-around; gap: 0; margin: 0 -15px; border-top: 1px solid #f2e8e5; }.nav-link { padding: 11px 1px; font-size: 9px; }.nav-link.active::after { bottom: 4px; }.page-shell { width: min(100% - 30px, 500px); min-height: calc(100svh - 105px); padding: 35px 0 50px; }.page-heading { margin-bottom: 27px; }.page-heading h1 { font-size: clamp(29px,8vw,38px); }.page-heading p { font-size: 13px; }
+  .countdown-page { min-height: 100svh; min-height: 100dvh; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }.countdown-top { flex-wrap: wrap; gap: 10px 0; }.countdown-top .brand { flex: 1 1 100%; margin: 0; }.countdown-actions { width: 100%; justify-content: flex-end; gap: 8px; }.countdown-content { padding: 18px 0 24px; }.countdown-footer { gap: 8px; }
+  .site-header { min-height: auto; flex-wrap: wrap; justify-content: space-between; gap: 0; padding: max(8px, env(safe-area-inset-top)) max(15px, env(safe-area-inset-right)) 0 max(15px, env(safe-area-inset-left)); }.site-header>.brand { margin: 0 0 8px 3px; font-size: 14px; }.music-button { min-height: 40px; margin-bottom: 8px; }.site-header nav { order: 3; width: calc(100% + 30px); justify-content: space-around; gap: 0; margin: 0 -15px; border-top: 1px solid #f2e8e5; }.nav-link { display: flex; min-height: 43px; align-items: center; padding: 9px 2px; font-size: 9px; }.nav-link.active::after { bottom: 4px; }.page-shell { width: min(100% - 30px, 500px); min-height: calc(100svh - 105px); padding: 35px 0 50px; }.page-heading { margin-bottom: 27px; }.page-heading h1 { font-size: clamp(29px,8vw,38px); }.page-heading p { font-size: 13px; }
   .puzzle-layout { display: flex; flex-direction: column; }.puzzle-board-wrap { width: 100%; padding: 11px; }.puzzle-side { position: static; width: 100%; }.side-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0 15px; }.side-card .eyebrow,.side-card h3 { grid-column: 1; }.side-card h3 { margin-bottom: 0; font-size: 20px; }.difficulty-options { grid-column: 2; grid-row: 1 / span 2; }.puzzle-stats { grid-column: 1 / -1; }.tiny-note { display: none; }.puzzle-controls { gap: 7px; }.puzzle-controls .button { padding: 0 10px; font-size: 9px; }
   .timeline::before { left: 12px; }.timeline-item,.timeline-item.reverse { grid-template-columns: 1fr; gap: 12px; padding: 17px 0 21px 35px; }.timeline-item::after { top: 23px; left: 6px; }.timeline-item.reverse .timeline-photo,.timeline-item.reverse .timeline-copy { grid-column: 1; grid-row: auto; }.timeline-photo { height: 200px; }.timeline-copy,.timeline-item.reverse .timeline-copy { text-align: left; }.timeline-copy p,.timeline-item.reverse .timeline-copy p { margin-left: 0; }.timeline-copy h2 { font-size: 21px; }.love-note { margin-top: 25px; padding: 28px 22px; }.love-note h2 { font-size: 22px; }.love-note p { font-size: 20px; }
   .gallery-toolbar { align-items: flex-start; flex-direction: column; }.filter-pills { gap: 2px; }.filter-pills button { padding: 7px 9px; font-size: 9px; }.gallery-actions { width: 100%; justify-content: flex-end; }.memory-grid { gap: 10px; }.memory-image,.memory-3 .memory-image,.memory-4 .memory-image { height: 155px; }.memory-caption { padding: 10px; }.memory-caption h3 { font-size: 15px; }.memory-caption p { font-size: 9px; }.memory-caption>span { font-size: 8px; }.favorite-heart { top: 7px; right: 7px; width: 29px; height: 29px; }.lightbox { padding: 35px 48px; }.lightbox-arrow.left { left: 6px; }.lightbox-arrow.right { right: 6px; }.lightbox-close { top: 10px; right: 10px; }
@@ -112,7 +113,25 @@ button { cursor: pointer; }
 .envelope:not(.opened) .letter-paper { visibility: hidden; }
 .envelope.opened { min-height: calc(min(68svh, 650px) + 100px); }
 .envelope.opened .letter-paper { max-height: min(68svh, 650px); overflow-y: auto; overscroll-behavior: contain; visibility: visible; transform: translateY(-52px); }
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .envelope.opened { min-height: calc(min(68svh, 650px) + 120px); }
   .envelope.opened .letter-paper { transform: translateY(-36px); }
+}
+
+@media (max-width: 380px) {
+  .countdown-actions { gap: 6px; }
+  .date-pill { gap: 5px; padding: 8px 9px; font-size: 9px; }
+  .countdown-actions .music-button { min-height: 35px; padding: 0 9px; font-size: 9px; }
+  .countdown-content h1 { font-size: clamp(40px, 12vw, 48px); }
+  .countdown-clock { width: 100%; justify-content: center; gap: clamp(5px, 2vw, 10px); }
+  .time-unit { min-width: 0; flex: 1; }
+  .time-unit strong { width: min(100%, 59px); }
+  .site-header>.brand { font-size: 12px; }
+  .site-header nav { width: calc(100% + 30px); }
+  .nav-link { font-size: 8px; }
+  .page-shell { width: calc(100% - 24px); }
+  .puzzle-controls { flex-wrap: wrap; }
+  .gallery-actions { justify-content: flex-start; flex-wrap: wrap; }
+  .memory-grid { grid-template-columns: 1fr; }
+  .memory-image,.memory-3 .memory-image,.memory-4 .memory-image { height: auto; aspect-ratio: 1.1; }
 }
