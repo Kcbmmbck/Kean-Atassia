@@ -26,6 +26,12 @@ button { cursor: pointer; }
 .countdown-page { position: relative; min-height: 100svh; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 28px clamp(22px, 5vw, 76px) 22px; background: radial-gradient(ellipse at 49% 44%, #fff 0, #fffaf8 47%, #fdf1ef 100%); }
 .countdown-page::before,.countdown-page::after { position: absolute; content: "✦"; color: #ecc4c8; font-size: 17px; animation: twinkle 3.3s ease-in-out infinite; }
 .countdown-page::before { top: 24%; left: 17%; }.countdown-page::after { top: 34%; right: 19%; animation-delay: 1.2s; }
+.heart-bubbles { position: absolute; z-index: 3; inset: 0; overflow: hidden; pointer-events: none; }
+.heart-bubble { position: absolute; bottom: -45px; display: grid; width: var(--bubble-size); height: var(--bubble-size); place-items: center; padding: 0; border: 1px solid #fff9; border-radius: 50%; color: #d77589; background: radial-gradient(circle at 32% 27%,#fff 0,#ffe9ed 36%,#f7cbd3 100%); box-shadow: 0 4px 14px #bd66752b,inset 0 1px 4px #fff; opacity: 0; pointer-events: auto; animation: float-heart-bubble linear infinite; }
+.heart-bubble svg { width: 13px; height: 13px; filter: drop-shadow(0 1px 1px #fff9); }
+.heart-bubble.popped { animation: pop-heart-bubble .55s ease-out forwards !important; animation-delay: 0s !important; }
+@keyframes float-heart-bubble { 0% { transform: translate3d(0,0,0) rotate(-12deg); opacity: 0; } 10% { opacity: .78; } 50% { transform: translate3d(24px,-50vh,0) rotate(12deg); } 90% { opacity: .72; } 100% { transform: translate3d(-12px,-110vh,0) rotate(-12deg); opacity: 0; } }
+@keyframes pop-heart-bubble { 0% { transform: scale(1); opacity: .8; } 35% { transform: scale(1.8); opacity: .9; box-shadow: 0 0 0 12px #f4cbd455,0 0 30px #e99aaa88; } 100% { transform: scale(.2); opacity: 0; } }
 .countdown-top,.countdown-footer { z-index: 2; width: min(100%, 1240px); display: flex; justify-content: space-between; align-items: center; }
 .countdown-actions { display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; gap: 10px; white-space: nowrap; }
 .brand { display: inline-flex; gap: 9px; align-items: center; color: #8e5160; font-family: "Playfair Display",serif; font-size: 16px; font-style: italic; }

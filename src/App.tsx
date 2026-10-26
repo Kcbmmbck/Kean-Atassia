@@ -50,6 +50,7 @@ function CountdownPage() {
 
   return <main className="countdown-page">
     <div className="countdown-orb orb-one" /><div className="countdown-orb orb-two" />
+    <HeartBubbles />
     <div className="countdown-top"><Link className="brand" to="/"><span className="brand-mark"><Heart size={17} fill="currentColor" /></span><span>made with love, for you</span></Link><div className="countdown-actions"><span className="date-pill"><Sparkles size={14} /> August 13, 2027</span><CountdownMusic /></div></div>
     <div className="countdown-content">
       <motion.div className="hero-heart" animate={{ scale: [1, 1.08, 1], rotate: [0, -4, 4, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}><Heart size={75} fill="currentColor" strokeWidth={1.3} /><span className="heart-sparkle">✦</span></motion.div>
@@ -66,6 +67,41 @@ function CountdownPage() {
     </div>
     <div className="countdown-footer"><span>Made by Kean Moscoso</span><span>♡ &nbsp; forever starts here</span></div>
   </main>
+}
+
+const heartBubblePositions = [
+  { left: '8%', delay: '0s', duration: '11s', size: '30px' },
+  { left: '20%', delay: '4s', duration: '13s', size: '23px' },
+  { left: '34%', delay: '1.5s', duration: '12s', size: '27px' },
+  { left: '49%', delay: '6s', duration: '14s', size: '21px' },
+  { left: '63%', delay: '2.5s', duration: '11.5s', size: '29px' },
+  { left: '77%', delay: '5s', duration: '13.5s', size: '24px' },
+  { left: '91%', delay: '3s', duration: '12.5s', size: '31px' },
+]
+
+function HeartBubbles() {
+  const [popped, setPopped] = useState<number[]>([])
+  const pop = (index: number) => {
+    if (popped.includes(index)) return
+    setPopped(items => [...items, index])
+    window.setTimeout(() => setPopped(items => items.filter(item => item !== index)), 650)
+  }
+
+  return <div className="heart-bubbles" aria-label="Floating hearts to pop">
+    {heartBubblePositions.map((bubble, index) => <button
+      key={index}
+      type="button"
+      className={`heart-bubble${popped.includes(index) ? ' popped' : ''}`}
+      style={{
+        left: bubble.left,
+        animationDelay: bubble.delay,
+        animationDuration: bubble.duration,
+        '--bubble-size': bubble.size,
+      } as React.CSSProperties}
+      aria-label="Pop a floating heart"
+      onClick={() => pop(index)}
+    ><Heart size={19} fill="currentColor" /></button>)}
+  </div>
 }
 
 function PinPage({ onUnlock }: { onUnlock: () => void }) {
